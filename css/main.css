@@ -104,7 +104,7 @@ h2 {
 
 footer {
 	background: #e6e6e6;
-	position: bottom;
+	position: relative;
 	padding: 1px 0;
 	width: 100%;
 	bottom: 0;
