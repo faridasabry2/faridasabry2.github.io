@@ -150,8 +150,7 @@ footer {
 		padding-top: 20px;
 	}
 	h3 {
-		margin-top: 5%;
-		margin-bottom: 5%;
+		margin-top: 10%;
 	}
 	header {
 		height: 25vh;
@@ -172,6 +171,7 @@ footer {
 		padding-top: 70px;
 	}
 	footer {
-		float: bottom;
+		position: absolute;
+		bottom: 0;
 	}
 }
