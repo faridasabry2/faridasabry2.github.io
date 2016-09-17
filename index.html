@@ -9,7 +9,7 @@
 		<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<!-- CSS -->
+		<!-- Custom CSS -->
 		<link rel="stylesheet" href="css/main.css" type="text/css">
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="images/S2.png">
@@ -18,15 +18,15 @@
 		<title>Farida Sabry</title>
 	</head>
 	<body>
-		<header>
+		<header class="striped">
 			<h1>Farida Sabry</h1>
 			<img src="images/me.jpg" class="profile">
 		</header>
     <div class="nav">
       	<div class="container">
         	<ul>
-            <li><a href="#about_me">About Me</a></li>
-	  	    	<li><a href="#projects">Projects</a></li>
+            <li><a class="normal" href="#about_me">About Me</a></li>
+	  	    	<li><a class="normal" href="projects.html">Projects</a></li>
 					</ul>
         </div>
     </div>
@@ -42,26 +42,18 @@
         	<i class="fa fa-linkedin-square fa-2x"></i></a>
 			</ul>
   	</div>
-		<h2 id="element">Front-end Developer <span class="typed-cursor"></span></h2>
+		<h2><span id="element"></span></h2>
 		<h3>I like making pretty things!<br />
 		I love the beast that is front-end and strive to make myself a better developer day after day.</h3>
-		<!-- <div class="quote">
-      <h2>Maker-Upper</h2>
-			<q>Simple it's not, I'm afraid you will find,
-			<br>for a mind-maker-upper to make up his mind.</q><br>
-			<p>- Dr.Seus</p>
-			<p>I just get so excited about all the possibilities... </p>
-		</div> -->
     <footer>
       	<p>Made with <i class="fa fa-heart heart" aria-hidden="true"></i> in Smith College &nbsp; | &nbsp; 2016</p>
   	</footer>
-		<script src="jquery.js"></script>
 		<script src="typed.js"></script>
 		<script>
 		  $(function(){
 		      $("#element").typed({
-		        strings: ["First sentence.", "Second sentence."],
-		        typeSpeed: 100
+		        strings: ["Maker-Upper", "Innovator", "Front-End Developer"],
+		        typeSpeed: 80
 		      });
 		  });
 		</script>
