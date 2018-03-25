@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="images/S2.png">
+		<title>Farida Sabry</title>
+	</head>
+	<body>
+
+		<header class="striped short">
+			<h1>Portfolio</h1>
+		</header>
+		<!-- MAIN (Center website) -->
+		<div class="main">
+
+		<div id="btnContainer">
+		  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+		  <button class="btn" onclick="filterSelection('web')">Web</button>
+		  <button class="btn" onclick="filterSelection('java')">Java</button>
+		  <button class="btn" onclick="filterSelection('mobile')">Mobile</button>
+		</div>
+
+		<!-- Portfolio Gallery Grid -->
+		<div class="row">
+		  <div class="column web">
+		    <div class="content">
+		      <a href="http://faridasabry.com/4Paws">
+		      	<img src="images/fopaw.png" style="width:100%">
+		      </a>
+		      <h4>Fopaw</h4>		      
+		      <!-- <p>Lorem ipsum dolor..</p> -->
+		    </div>
+		  </div>
+
+		  <div class="column web">
+		    <div class="content">
+		    	<a href="https://github.com/ZainabAq/startup-kuk">
+		      		<img src="images/Kuk/browse.png" style="width:100%">
+		      	</a>
+		     	<h4>Kuk</h4>
+		      <!-- <p>Lorem ipsum dolor..</p> -->
+		    </div>
+		  </div>
+
+		  <div class="column web">
+		    <div class="content">
+		      	<a href="http://faridasabry.com/SmithHousing">
+		      		<img src="images/smith.jpg" style="width:100%">
+		      	</a>
+		     	<h4>Smith Housing</h4>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- END GRID -->
+		</div>
+
+		<footer>
+	      	<p>Made with <i class="fa fa-heart heart" aria-hidden="true"></i> in Smith College &nbsp; | &nbsp; 2017</p>
+	  	</footer>
+
+		<!-- END MAIN -->
+		</div>
+
+		<script>
+			filterSelection("all")
+			function filterSelection(c) {
+			  var x, i;
+			  x = document.getElementsByClassName("column");
+			  if (c == "all") c = "";
+			  for (i = 0; i < x.length; i++) {
+			    w3RemoveClass(x[i], "show");
+			    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+			  }
+			}
+
+			function w3AddClass(element, name) {
+			  var i, arr1, arr2;
+			  arr1 = element.className.split(" ");
+			  arr2 = name.split(" ");
+			  for (i = 0; i < arr2.length; i++) {
+			    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+			  }
+			}
+
+			function w3RemoveClass(element, name) {
+			  var i, arr1, arr2;
+			  arr1 = element.className.split(" ");
+			  arr2 = name.split(" ");
+			  for (i = 0; i < arr2.length; i++) {
+			    while (arr1.indexOf(arr2[i]) > -1) {
+			      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+			    }
+			  }
+			  element.className = arr1.join(" ");
+			}
+
+
+			// Add active class to the current button (highlight it)
+			var btnContainer = document.getElementById("btnContainer");
+			var btns = btnContainer.getElementsByClassName("btn");
+			for (var i = 0; i < btns.length; i++) {
+			  btns[i].addEventListener("click", function(){
+			    var current = document.getElementsByClassName("active");
+			    current[0].className = current[0].className.replace(" active", "");
+			    this.className += " active";
+			  });
+			}
+		</script>
+
+
+
+
+	</body>
+</html>
